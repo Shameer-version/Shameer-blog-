@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MD Shameer — Optometrist & Blogger</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shameer | Vision & Vibes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <h1>👨‍⚕️ Shameer</h1>
-      <p>Optometrist | Blogger | Anime Fan</p>
-      <nav>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="typing-text">Hi, I’m Shameer 👓</h1>
+      <p class="sub">Optometrist in training ✦ Anime lover ✦ Vision Explorer</p>
+      <nav class="nav">
         <a href="#about">About</a>
-        <a href="#journey">Journey</a>
         <a href="#blog">Blog</a>
-        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button id="toggle-theme">🌓</button>
       </nav>
-      <div class="social">
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I’m a student optometrist from India. My world is a mix of eye science, manga panels, and chill lofi playlists. I believe in dreaming big while staying grounded — just like a peaceful anime protagonist on a mission.</p>
+  </section>
+
+  <section id="blog" class="section fade-in">
+    <h2>Blog Highlights</h2>
+    <div class="blog-cards">
+      <div class="card">
+        <h3>👁️ Understanding Myopia Control</h3>
+        <p>What every optometry student should know about controlling myopia progression in kids.</p>
       </div>
-    </aside>
+      <div class="card">
+        <h3>🌠 My Top 5 Anime That Changed Me</h3>
+        <p>How anime helped me navigate emotions, identity, and inspiration.</p>
+      </div>
+      <div class="card">
+        <h3>🔬 Visual Search in Daily Life</h3>
+        <p>My real-world experiments on how we find things — and what it says about attention.</p>
+      </div>
+    </div>
+  </section>
 
-    <main class="main-content">
-      <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I’m MD Shameer, a student optometrist from India pursuing my Bachelor's degree at the Elite School of Optometry, SASTRA University. I love blending science and creativity, especially through blogging and design.</p>
-        <ul>
-          <li>📍 Location: India</li>
-          <li>📚 Field: Vision Science & Optometry</li>
-          <li>🎯 Goal: Build awareness & bring tech to healthcare</li>
-        </ul>
-      </section>
+  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <p>Let’s connect, collab, or just vibe ✨</p>
+    <div class="socials">
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+  </section>
 
-      <section id="journey" class="section">
-        <h2>My Journey</h2>
-        <p>Interned at top eye hospitals like Sankara Nethralaya and Lotus Eye Hospital. I’ve conducted school screenings, occupational vision tests, and contributed to research on visual search efficiency.</p>
-      </section>
-
-      <section id="blog" class="section">
-        <h2>Blog</h2>
-        <p>Stay tuned for personal reflections, clinical insights, and creative posts that mix optometry, anime, and tech.</p>
-      </section>
-
-      <section id="resume" class="section">
-        <h2>📄 Resume</h2>
-        <p>Download my resume to learn more about my background, projects, and goals.</p>
-        <a class="resume-button" href="MD SHAMEER Resume.pdf" download>Download Resume</a>
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
+  <footer class="footer">
+    <p>Made with 👾 and 🎧 by Shameer</p>
+  </footer>
 </body>
 </html>
