@@ -3,122 +3,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shameer's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --link-color: #0077cc;
-    }[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #f1f1f1;
-  --link-color: #66ccff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 2rem;
-  line-height: 1.6;
-  transition: all 0.3s ease-in-out;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-img.profile {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 1rem auto;
-  display: block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-.intro {
-  margin: 1rem 0;
-}
-
-.social {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.social a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--link-color);
-  font-size: 1.2rem;
-}
-
-.section {
-  margin: 2rem 0;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 0.5rem;
-  cursor: pointer;
-  background: var(--link-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
-  h1 { font-size: 2rem; }
-  body { padding: 1rem; }
-}
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      display: flex;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
+    }
+    aside {
+      width: 250px;
+      background-color: #ffe4ec;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      position: fixed;
+    }
+    aside h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #ff6f91;
+    }
+    aside nav a {
+      display: block;
+      margin: 1rem 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    aside nav a:hover {
+      color: #ff6f91;
+    }
+    main {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
+      animation: fadeIn 1.5s ease;
+    }
+    header img {
+      border-radius: 50%;
+      width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1, h2 {
+      color: #ff6f91;
+    }
+    .socials a {
+      margin-right: 1rem;
+      color: #ff6f91;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      aside {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+      }
+      aside nav a {
+        margin: 0 0.5rem;
+      }
+      main {
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <button class="toggle" onclick="toggleTheme()">🌓</button>
-  <header>
-    <img class="profile" src="https://via.placeholder.com/120" alt="Shameer" />
-    <h1>Shameer</h1>
-    <p class="intro">Student Optometrist | Anime Lover | Music Enthusiast</p>
-    <div class="social">
-      <a href="https://instagram.com/shameer_version" target="_blank">📷 Instagram</a>
-      <a href="https://www.linkedin.com/in/shameer-version" target="_blank">💼 LinkedIn</a>
-    </div>
-  </header>  <section class="section">
-    <h2>🌱 My Journey</h2>
-    <p>
-      I'm a student optometrist from India. My world is filled with the beauty of human vision, the stories told in anime, and the emotion in music. I believe every eye has a story, just like every anime has a journey.
-    </p>
-  </section>  <section class="section">
-    <h2>📝 Blog Coming Soon</h2>
-    <p>
-      I’ll be sharing my thoughts on optometry, daily life, and the anime that inspires me. Stay tuned!
-    </p>
-  </section>  <script>
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute(
-        'data-theme',
-        current === 'dark' ? 'light' : 'dark'
-      );
-    }
+  <aside>
+    <header>
+      <img src="https://i.ibb.co/xL1dK0S/profile-placeholder.png" alt="Profile" />
+      <h2>Shameer</h2>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#journey">My Journey</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </aside>  <main>
+    <section id="about">
+      <h1>About Me</h1>
+      <p>Hi! I'm Shameer, a student optometrist from India. I love anime, manga, music, and building things online. This blog is where I share my journey and ideas.</p>
+      <div class="socials">
+        <a href="https://instagram.com/shameer_version" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/shameer-version" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section><section id="journey">
+  <h2>My Journey</h2>
+  <p>From a small town in India to becoming an optometry student, my journey has been filled with stories, struggles, and dreams. I’m excited to share them with you all here.</p>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <p>Soon I’ll start writing about my experiences, what I’m learning in vision science, and my personal thoughts on anime and life!</p>
+</section>
+
+  </main>  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
   </script></body>
 </html>
