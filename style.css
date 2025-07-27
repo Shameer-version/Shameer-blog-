@@ -4,18 +4,24 @@
   --accent: #0077ff;
   --muted: #777;
   --sidebar-bg: #f8f9fa;
-  --dark-bg: #121212;
-  --dark-text: #eaeaea;
-  --dark-card: #1f1f1f;
-  --font: 'Segoe UI', sans-serif;
+  --card-bg: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eaeaea;
+  --accent: #0af;
+  --muted: #aaa;
+  --sidebar-bg: #1c1c1c;
+  --card-bg: #1f1f1f;
 }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .layout {
@@ -25,16 +31,16 @@ body {
 
 .sidebar {
   width: 260px;
-  padding: 2rem;
   background: var(--sidebar-bg);
-  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  padding: 2rem;
   position: fixed;
   height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar h1 {
-  font-size: 1.6rem;
-  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  margin: 0 0 0.2rem;
 }
 
 .sidebar p {
@@ -49,27 +55,37 @@ body {
 }
 
 .sidebar nav a {
-  color: var(--text);
   text-decoration: none;
+  color: var(--text);
   font-weight: 600;
-  transition: color 0.2s;
 }
 
 .sidebar nav a:hover {
   color: var(--accent);
 }
 
-.sidebar .social {
+.social {
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.sidebar .social a {
-  font-size: 0.9rem;
+.social a {
+  display: block;
   color: var(--accent);
   text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+#darkToggle {
+  margin-top: 2rem;
+  padding: 0.6rem;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
 }
 
 .main-content {
@@ -80,13 +96,16 @@ body {
 
 .section {
   margin-bottom: 4rem;
-  max-width: 750px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
 }
 
 .section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
   color: var(--accent);
+  margin-bottom: 1rem;
 }
 
 .section ul {
@@ -105,6 +124,25 @@ body {
   position: absolute;
   left: 0;
   color: var(--accent);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 .resume-button {
@@ -136,6 +174,6 @@ body {
 
   .main-content {
     margin-left: 0;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 }
