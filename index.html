@@ -1,99 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shameer's Blog</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">Shameer</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#anime">Anime</a></li>
-        <li><a href="#optometry">Optometry</a></li>
-        <li><a href="#stories">Stories</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #121212; color: #eee; }
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <h1>Welcome to My World</h1>
-    <p>Skills | Anime | Optometry | Stories</p>
-  </section>
+.sidebar { position: fixed; left: 0; top: 0; width: 200px; height: 100%; background: #1f1f1f; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: space-between; }
 
-  <!-- About Me -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Student Optometrist. Curious Mind. Creative Soul. Tech Explorer.</p>
-    <!-- Add skills, resume link, etc. -->
-  </section>
+.sidebar h1 { color: #00ffd5; font-size: 24px; margin-bottom: 40px; }
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <!-- Project cards go here -->
-    </div>
-  </section>
+.sidebar ul { list-style: none; padding: 0; }
 
-  <!-- Anime Section -->
-  <section id="anime" class="section">
-    <h2>Anime</h2>
-    <p>My favs, watchlist & reviews!</p>
-    <div class="anime-cards">
-      <!-- Anime content -->
-    </div>
-  </section>
+.sidebar ul li { margin: 20px 0; }
 
-  <!-- Optometry Section -->
-  <section id="optometry" class="section">
-    <h2>Optometry</h2>
-    <p>Clinical cases, study tips, concepts.</p>
-    <div class="optometry-content">
-      <!-- Cards/articles -->
-    </div>
-  </section>
+.sidebar ul li a { color: #eee; text-decoration: none; transition: color 0.3s; }
 
-  <!-- Short Stories -->
-  <section id="stories" class="section">
-    <h2>Short Stories</h2>
-    <p>Feel-good tales, horror, lofi-style writing.</p>
-    <div class="story-gallery">
-      <!-- Story links or previews -->
-    </div>
-  </section>
+.sidebar ul li a:hover { color: #00ffd5; }
 
-  <!-- Blog Posts -->
-  <section id="blog" class="section">
-    <h2>All Blog Posts</h2>
-    <div class="blog-list">
-      <!-- Reusable cards with tags -->
-    </div>
-  </section>
+.social a { color: #aaa; font-size: 14px; display: block; margin: 10px 0; text-decoration: none; }
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Let's connect: <br>
-      <a href="https://www.instagram.com/your_instagram" target="_blank">Instagram</a> |
-      <a href="https://www.linkedin.com/in/your_linkedin" target="_blank">LinkedIn</a>
-    </p>
-  </section>
+main { margin-left: 220px; padding: 40px; }
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Shameer | Built with ❤️</p>
-  </footer>
+.hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('banner.jpg') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: #fff; }
 
-  <script src="script.js"></script>
-</body>
-</html>
+.hero h2 { font-size: 36px; margin-bottom: 10px; }
+
+.hero p { font-size: 20px; margin-bottom: 20px; color: #00ffd5; }
+
+.btn { background: #00ffd5; color: #000; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; }
+
+.section { padding: 60px 0; }
+
+.section h2 { font-size: 28px; margin-bottom: 20px; border-bottom: 2px solid #00ffd5; display: inline-block; padding-bottom: 5px; }
+
+.about-content { display: flex; align-items: center; gap: 30px; }
+
+.profile-pic { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 15px #00ffd5; }
+
+ul { list-style: square inside; line-height: 1.8em; }
+
