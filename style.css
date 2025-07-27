@@ -1,0 +1,93 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #1a1a1a;
+  --accent: #0077ff;
+  --card: white;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eaeaea;
+  --accent: #0af;
+  --card: #1f1f1f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: var(--card);
+  padding: 1rem;
+  position: fixed;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sidebar a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: var(--accent);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 2rem;
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 4rem;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
