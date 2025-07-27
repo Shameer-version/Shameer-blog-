@@ -1,155 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Jason Martin | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #222931;
-      color: #ececec;
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.5;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #181c20;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px #111a22aa;
-      overflow: hidden;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 40px;
-      background: #23282f;
-    }
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #444;
-    }
-    .header-content {
-      flex: 1;
-    }
-    .header-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .header-subtitle {
-      font-size: 1.2rem;
-      color: #78ffd6;
-    }
-    section {
-      padding: 40px;
-      border-top: 1px solid #2b313a;
-    }
-    .about-text {
-      font-size: 1.1rem;
-      color: #ccc;
-      max-width: 70%;
-    }
-    .skills-contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-    .skills,
-    .contact {
-      flex: 1 1 300px;
-    }
-    .skills h3,
-    .contact h3 {
-      color: #78ffd6;
-      margin-top: 0;
-    }
-    .skills-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .skills-list li {
-      margin-bottom: 8px;
-    }
-    .contact-info {
-      font-size: 1rem;
-      color: #eee;
-      line-height: 2;
-    }
-    @media (max-width: 700px) {
-      .container, section {
-        padding: 16px;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 24px;
-      }
-      .about-text {
-        max-width: 100%;
-      }
-      .skills-contact {
-        flex-direction: column;
-        gap: 24px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Shameer S - Optometrist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <!-- HEADER -->
-    <header>
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Photo" class="profile-photo">
-      <div class="header-content">
-        <div class="header-title">Jason Martin</div>
-        <div class="header-subtitle">Front-End Developer & Blogger</div>
-        <div class="header-links">
-          <!-- Replace # with your links -->
-          <a href="#" style="color:#78ffd6;margin-right:20px;">Twitter</a>
-          <a href="#" style="color:#78ffd6;margin-right:20px;">GitHub</a>
-          <a href="#" style="color:#78ffd6;">LinkedIn</a>
-        </div>
-      </div>
-    </header>
-    <!-- ABOUT -->
-    <section>
-      <h2>About</h2>
-      <div class="about-text">
-        Hi! I’m Jason, passionate about crafting beautiful and functional web experiences. Welcome to my blog where I share my journey, tutorials, and thoughts on modern web development and design.
-      </div>
-    </section>
-    <!-- SKILLS & CONTACT -->
-    <section>
-      <div class="skills-contact">
-        <div class="skills">
-          <h3>Skills</h3>
-          <ul class="skills-list">
-            <li>HTML5 / CSS3 / JavaScript</li>
-            <li>React.js & Next.js</li>
-            <li>UI/UX Design</li>
-            <li>Responsive Layouts</li>
-            <li>Git & GitHub</li>
-          </ul>
-        </div>
-        <div class="contact">
-          <h3>Contact</h3>
-          <div class="contact-info">
-            Email: jason@example.com<br>
-            Location: New York, USA<br>
-            Open for freelance projects<br>
-          </div>
-        </div>
-      </div>
-    </section>
+  <nav class="sidebar">
+    <h1>Shameer</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#stories">My Stories</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.instagram.com/duh.its_mohamed" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/mohamed-shameer-s-72872436a" target="_blank">LinkedIn</a>
+    </div>
+  </nav>  <main>
+    <section id="home" class="hero">
+      <h2>MOHAMED SHAMEER S</h2>
+      <p>OPTOMETRIST</p>
+      <a href="#resume" class="btn">View Resume</a>
+    </section><section id="about" class="section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="profile.jpg" alt="Profile Image" class="profile-pic" />
+    <p>Hi, I'm Mohamed Shameer S, a passionate student optometrist from India. I specialize in vision care, myopia control, and binocular vision. I also enjoy anime, manga, music, and storytelling.</p>
+    <ul>
+      <li><strong>Email:</strong> mohamedshameer12345@gmail.com</li>
+      <li><strong>Phone:</strong> 9345768563</li>
+      <li><strong>Location:</strong> India</li>
+    </ul>
   </div>
+</section>
+
+<section id="resume" class="section">
+  <h2>Resume</h2>
+  <h3>Education</h3>
+  <p>Bachelor of Optometry - SASTRA Deemed to be University</p>
+
+  <h3>Experience</h3>
+  <ul>
+    <li>Internship at <strong>Sankara Nethralaya Eye Hospital</strong>, Chennai</li>
+    <li>Vision screening camps and CME participation</li>
+    <li>Thesis: Visual Search Task Grading in Real-World Scenarios</li>
+    <li>Case presentations on scleral lens and binocular prism management</li>
+  </ul>
+
+  <h3>Skills</h3>
+  <ul>
+    <li>Refraction & Prescription</li>
+    <li>Binocular Vision Management</li>
+    <li>Myopia Control (Atropine, Ortho-K)</li>
+    <li>Scleral Lens Fitting</li>
+    <li>Case Interpretation & Patient Handling</li>
+  </ul>
+
+  <h3>Languages</h3>
+  <p>English, Tamil, Hindi</p>
+</section>
+
+<section id="portfolio" class="section">
+  <h2>Portfolio</h2>
+  <h3>Clinical Projects & Case Studies</h3>
+  <ul>
+    <li><strong>Scleral Lens for Post-LASIK Ectasia:</strong> Managed a complex case using custom scleral lens design and Fresnel prism correction for binocular diplopia.</li>
+    <li><strong>Vertical Heterophoria Management:</strong> Applied vertical prism correction and vision therapy techniques in a patient with chronic diplopia and asthenopia.</li>
+  </ul>
+
+  <h3>Research & Thesis</h3>
+  <p>Grading Visual Search Tasks Based on Subjective Perception – Developed real-world experiments to classify visual search tasks by difficulty and attention load, based on participant feedback and performance.</p>
+
+  <h3>Myopia Control Experience</h3>
+  <p>Experienced with low-dose atropine, multifocal lenses, and orthokeratology in pediatric patients.</p>
+</section>
+
+<section id="stories" class="section">
+  <h2>My Stories</h2>
+  <p>I write feel-good and emotional short stories inspired by life, anime, and creativity. Stay tuned for updates!</p>
+</section>
+
+<section id="hobbies" class="section">
+  <h2>Hobbies & Interests</h2>
+  <ul>
+    <li>Anime 🎌</li>
+    <li>Lofi Music 🎧</li>
+    <li>Storytelling ✍️</li>
+  </ul>
+</section>
+
+  </main>
 </body>
 </html>
